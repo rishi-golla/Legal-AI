@@ -1,5 +1,5 @@
 # Legal-AI
-A legal based chatbot that provides multiple services.
+A legal based chatbot that provides multiple services for our users. 
 
 
 # Instructions on how to turn it on
