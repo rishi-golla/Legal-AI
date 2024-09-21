@@ -1,4 +1,3 @@
-// src/components/Chatbot.js
 import React, { useState } from 'react';
 
 const Chatbot = () => {
@@ -13,7 +12,8 @@ const Chatbot = () => {
     // Add user message
     setMessages((prev) => [...prev, { text: input, sender: 'user' }]);
 
-    // Simulate a chatbot response
+    //IMPLEMENT YOUR API CALL HERE
+    //AI RESPONSES SHOULD BE ADDED TO THE messages ARRAY
     setTimeout(() => {
       setMessages((prev) => [
         ...prev,
@@ -21,7 +21,6 @@ const Chatbot = () => {
       ]);
     }, 1000);
 
-    // Clear the input
     setInput('');
   };
 
