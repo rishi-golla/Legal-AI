@@ -1,17 +1,22 @@
 
 
 
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import About from './About';
 import { useInView } from 'react-intersection-observer';
+import Questions from './Questions';
 
 const Home = ({ setActiveSection }) => {
   const { ref: goalRef, inView: goalInView } = useInView({ threshold: 0.5 });
   const { ref: hackathonRef, inView: hackathonInView } = useInView({ threshold: 0.5 });
+  
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
     <section className="pt-40 min-h-screen bg-primary text-textPrimary flex flex-col justify-center items-center text-center space-y-8">
+      <Questions isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
+      
       <div className='flex flex-col lg:flex-row h-auto lg:min-h-screen w-full lg:justify-center lg:items-start'>
         <motion.div
           initial={{ x: '-100%', opacity: 0 }}
@@ -22,14 +27,15 @@ const Home = ({ setActiveSection }) => {
           <img
             src='lawyer.png'
             alt='Lawyer'
-            className='w-auto h-auto max-h-[600px] object-contain'
+            className='w-auto h-auto max-h-[600px] object-contain cursor-pointer hover:scale-110 duration-150'
+            onClick={() => setIsModalOpen(true)}
           />
-          <button className='hover:scale-105 duration-150 bg-[#00000080] hover:bg-purple-300 hover:text-black absolute top-5 right-5 rounded-full p-4 text-purple-300' onClick={() => setActiveSection("chatbot")}>
-            Click to start!
+          <button className='hover:scale-105 duration-150 bg-[#00000080] hover:bg-purple-300 hover:text-black absolute top-0 right-0 rounded-full p-4 text-purple-300' onClick={() => setIsModalOpen(true)}>
+            Click on me for personalized chat!
           </button>
-          <div className='duration-150 bg-[#00000080]  hover:text-black absolute top-[50px] right-[145px] rounded-full p-4 text-purple-300'>
+          <div className='duration-150 bg-[#00000080]  hover:text-black absolute top-[60px] right-[145px] rounded-full p-4 text-purple-300'>
           </div>
-          <div className='duration-150 bg-[#00000080]  hover:text-black absolute top-[80px] right-[180px] rounded-full p-2 text-purple-300'>
+          <div className='duration-150 bg-[#00000080]  hover:text-black absolute top-[90px] right-[180px] rounded-full p-2 text-purple-300'>
           </div>
         </motion.div>
 
