@@ -12,10 +12,13 @@ function App() {
   return (
     <div className="relative bg-primary min-h-screen overflow-y-auto">
       <SpaceBackground />
-      <Header setActiveSection={setActiveSection} />
-      {activeSection === "home" && <Home />}
-      {activeSection === "about" && <About />}
-      {activeSection === "chatbot" && <Chatbot />}
+      <div className='px-3 py-6'>
+        <Header setActiveSection={setActiveSection} />
+        {activeSection === "home" && <Home setActiveSection={setActiveSection} />}
+        {activeSection === "about" && <About />}
+        {activeSection === "chatbot" && <Chatbot />}
+      </div>
+      
       <Footer />
     </div>
   );

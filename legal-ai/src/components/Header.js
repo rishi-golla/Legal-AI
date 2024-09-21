@@ -2,7 +2,7 @@ import React from 'react';
 
 const Header = ({ setActiveSection }) => {
   return (
-    <header className="bg-gray-800 shadow-md fixed w-full top-0 left-0 z-10 flex justify-between items-center px-6 py-4">
+    <header className="bg-black bg-opacity-50 shadow-md fixed w-full top-0 left-0 z-10 flex justify-between items-center px-6 py-4">
       <div className="flex items-center space-x-3">
         {/* Add logo next to title */}
         <img
