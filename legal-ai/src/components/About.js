@@ -3,11 +3,11 @@ import React from 'react';
 import Photo from './Photo';
 
 const teamMembers = [
-  { name: 'Rishi Golla', role: 'Fullstack Developer + PM', image: 'rishi.jpeg', linkedin: 'https://www.linkedin.com/in/rishi-golla/' },
-  { name: 'Vladislav Kondratyev', role: 'Fullstack Developer + AI + PM', image: 'logo_vlad.png', linkedin: 'https://www.linkedin.com/in/vladislav-kondratyev/'},
-  { name: 'Arnab Dev', role: 'Frontend Developer', image: '/arnab-t.png', linkedin: 'https://www.linkedin.com/in/arnabdev/' },
-  { name: 'Ankith Ganji', role: 'Backend Developer', image: 'ank.PNG', linkedin: 'https://www.linkedin.com/in/ankith-ganji-34068525b/'},
-  { name: 'Aryav Rastogi', role: 'Backend Developer', image: 'aryav.jpeg', linkedin: 'https://www.linkedin.com/in/aryavrastogi/' },
+  { name: 'Rishi Golla', role: 'Fullstack Developer + PM', image: 'rishi.jpeg', linkedin: 'https://www.linkedin.com/in/rishi-golla/', instagram: 'https://www.instagram.com/rishi.golla_/?hl=en' },
+  { name: 'Vladislav Kondratyev', role: 'Fullstack Developer + AI + PM', image: 'logo_vlad.png', linkedin: 'https://www.linkedin.com/in/vladislav-kondratyev/', instagram: 'https://www.instagram.com/ch1kim0n1/?hl=en'},
+  { name: 'Arnab Dev', role: 'Frontend Developer', image: '/arnab-t.png', linkedin: 'https://www.linkedin.com/in/arnabdev/', instagram: 'https://www.instagram.com/arnabdev8/?hl=en' },
+  { name: 'Ankith Ganji', role: 'Backend Developer', image: 'ank.PNG', linkedin: 'https://www.linkedin.com/in/ankith-ganji-34068525b/', instagram: 'https://www.instagram.com/ankith_ganji/?hl=en'},
+  { name: 'Aryav Rastogi', role: 'Backend Developer', image: 'aryav.jpeg', linkedin: 'https://www.linkedin.com/in/aryavrastogi/', instagram: 'https://www.instagram.com/aryavrasto/?hl=en' },
 ];
 
 const About = () => {
@@ -28,7 +28,8 @@ const About = () => {
             <p className="text-purple-300">{member.role}</p>
             <a href={member.linkedin} target="_blank" rel="noopener noreferrer">
             <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn" className="w-6 h-6 hover:opacity-75" />
-          </a>
+            </a>
+          
           </div>
         ))}
       </div>
