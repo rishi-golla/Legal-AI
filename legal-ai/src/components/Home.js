@@ -24,10 +24,10 @@ const Home = ({ setActiveSection }) => {
           <button className='hover:scale-105 duration-150 bg-[#00000080] hover:bg-purple-300 hover:text-black absolute top-5 right-5 rounded-full p-4 text-purple-300' onClick={() => setActiveSection("chatbot")}>
             Click to start!
           </button>
-          <button className='duration-150 bg-[#00000080]  hover:text-black absolute top-[50px] right-[145px] rounded-full p-4 text-purple-300'>
-          </button>
-          <button className='duration-150 bg-[#00000080]  hover:text-black absolute top-[80px] right-[180px] rounded-full p-2 text-purple-300'>
-          </button>
+          <div className='duration-150 bg-[#00000080]  hover:text-black absolute top-[50px] right-[145px] rounded-full p-4 text-purple-300'>
+          </div>
+          <div className='duration-150 bg-[#00000080]  hover:text-black absolute top-[80px] right-[180px] rounded-full p-2 text-purple-300'>
+          </div>
         </motion.div>
         <div className='right gap-5 flex flex-col lg:w-2/3 w-full h-full justify-between'>
           <motion.div
@@ -52,7 +52,7 @@ const Home = ({ setActiveSection }) => {
             transition={{ duration: 0.8, delay:0.5 }}
             className=' w-full flex flex-col gap-5 justify-center'
           >
-            <div className="animate-fade-in w-full max-w-4xl p-6 border border-accent rounded-lg transform transition duration-500 hover:scale-105 shadow-lg" style={{ backgroundColor: 'rgba(0, 0, 0, 0.5)' }}>
+            <div className="w-full max-w-4xl p-6 border border-accent rounded-lg transform transition duration-500 hover:scale-105 shadow-lg" style={{ backgroundColor: 'rgba(0, 0, 0, 0.5)' }}>
               <p className="text-purple-300 text-lg">
                 Our goal is to make legal knowledge accessible, reliable, and efficient for everyone, by utilizing the latest advancements in AI technology.
               </p>
