@@ -26,8 +26,7 @@ const Home = ({ setActiveSection }) => {
             Click to start!
           </button>
         </motion.div>
-        
-        {/* Right Section (Content Boxes) */}
+      
         <div className='flex flex-col gap-5 w-full lg:w-2/3 p-5'>
           <motion.div
             initial={{ x: '100%', opacity: 0 }}
@@ -73,7 +72,6 @@ const Home = ({ setActiveSection }) => {
         </div>
       </div>
 
-      {/* New "Our Goal" box */}
       <motion.div
         ref={goalRef}
         initial={{ opacity: 0 }}
@@ -88,7 +86,6 @@ const Home = ({ setActiveSection }) => {
         </p>
       </motion.div>
 
-      {/* New "Hackathon Details" box */}
       <motion.div
         ref={hackathonRef}
         initial={{ opacity: 0 }}
