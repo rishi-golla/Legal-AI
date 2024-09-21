@@ -1,4 +1,3 @@
-// src/App.js
 import React from 'react';
 import Header from './components/Header';
 import Home from './components/Home';
@@ -11,7 +10,7 @@ function App() {
   const [activeSection, setActiveSection] = React.useState("home");
 
   return (
-    <div className="relative bg-primary min-h-screen overflow-hidden">
+    <div className="relative bg-primary min-h-screen overflow-y-auto">
       <SpaceBackground />
       <Header setActiveSection={setActiveSection} />
       {activeSection === "home" && <Home />}

@@ -1,4 +1,3 @@
-// src/components/Chatbot.js
 import React from 'react';
 
 const Chatbot = () => {

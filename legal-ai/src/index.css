@@ -69,8 +69,8 @@ code {
 .star {
   position: absolute;
   background-color: #fff;
-  border-radius: 50%;
-  box-shadow: 0 0 6px 2px rgba(255, 255, 255, 0.8);
+  border-radius: 10%;
+  box-shadow: 0 0 1px 0.5px rgba(255, 255, 255, 0.9);
   animation: flicker 3s infinite alternate;
 }
 

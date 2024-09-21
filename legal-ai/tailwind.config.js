@@ -27,6 +27,9 @@ module.exports = {
         textSecondary: "var(--color-text-secondary)",
         textAccent: "var(--color-text-accent)",
       },
+      animation: {
+        'fade-in': 'fadeIn 0.5s ease-in-out',
+      },
     },
   },
   plugins: [],
