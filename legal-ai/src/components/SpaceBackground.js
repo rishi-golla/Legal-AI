@@ -3,7 +3,7 @@ import React, { useEffect } from 'react';
 const SpaceBackground = () => {
   useEffect(() => {
     const space = document.querySelector(".space");
-    const numberOfStars = 450;
+    const numberOfStars = 300;
 
     for (let i = 0; i < numberOfStars; i++) {
       const star = document.createElement("div");
