@@ -3,11 +3,11 @@ import React from 'react';
 import Photo from './Photo';
 
 const teamMembers = [
-  { name: 'Rishi Golla', role: 'Fullstack Developer + PM', image: 'rishi.jpeg' },
-  { name: 'Vladislav Kondratyev', role: 'Fullstack Developer + AI + PM', image: 'logo_vlad.png' },
-  { name: 'Arnab Dev', role: 'Frontend Developer', image: '/arnab-t.png' },
-  { name: 'Ankith Ganji', role: 'Backend Developer', image: 'ank.PNG' },
-  { name: 'Aryav Rastogi', role: 'Backend Developer', image: 'aryav.jpeg' },
+  { name: 'Rishi Golla', role: 'Fullstack Developer + PM', image: 'rishi.jpeg', linkedin: 'https://www.linkedin.com/in/rishi-golla/' },
+  { name: 'Vladislav Kondratyev', role: 'Fullstack Developer + AI + PM', image: 'logo_vlad.png', linkedin: 'https://www.linkedin.com/in/vladislav-kondratyev/'},
+  { name: 'Arnab Dev', role: 'Frontend Developer', image: '/arnab-t.png', linkedin: 'https://www.linkedin.com/in/arnabdev/' },
+  { name: 'Ankith Ganji', role: 'Backend Developer', image: 'ank.PNG', linkedin: 'https://www.linkedin.com/in/ankith-ganji-34068525b/'},
+  { name: 'Aryav Rastogi', role: 'Backend Developer', image: 'aryav.jpeg', linkedin: 'https://www.linkedin.com/in/aryavrastogi/' },
 ];
 
 const About = () => {
@@ -26,6 +26,9 @@ const About = () => {
             <Photo imgSrc={member.image} />
             <h4 className="text-purple-300 text-xl font-bold text-accent">{member.name}</h4>
             <p className="text-purple-300">{member.role}</p>
+            <a href={member.linkedin} target="_blank" rel="noopener noreferrer">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn" className="w-6 h-6 hover:opacity-75" />
+          </a>
           </div>
         ))}
       </div>
