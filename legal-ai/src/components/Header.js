@@ -10,7 +10,7 @@ const Header = ({ setActiveSection }) => {
           alt="logo"
           className="h-8 w-8"
         />
-        <h1 className="text-2xl font-bold text-purple-300 cursor-pointer" onClick={() => setActiveSection("home")}>
+        <h1 className="text-2xl font-bold text-white cursor-pointer" onClick={() => setActiveSection("home")}>
           LegalAI
         </h1>
       </div>
