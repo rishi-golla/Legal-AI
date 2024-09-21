@@ -1,11 +1,11 @@
 import React from 'react';
 
 const teamMembers = [
-  { name: 'Rishi Golla', role: 'Software Developer', image: '../pic/' },
-  { name: 'Vladislav Kondratyev', role: 'Software Developer', image: '../pic/' },
+  { name: 'Rishi Golla', role: 'Fullstack Developer + PM', image: '../pic/' },
+  { name: 'Vladislav Kondratyev', role: 'Fullstack Developer + AI + PM', image: '../pic/' },
   { name: 'Arnab Dev', role: 'Frontend Developer', image: '../pic/' },
   { name: 'Ankith Ganji', role: 'Backend Developer', image: '../pic/' },
-  { name: 'Aryav Rastogi', role: 'Project Manager', image: '../pic/' },
+  { name: 'Aryav Rastogi', role: 'Backend Developer', image: '../pic/' },
 ];
 
 const About = () => {
