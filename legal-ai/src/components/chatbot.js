@@ -5,7 +5,7 @@ const Chatbot = () => {
   return (
     <section className="pt-20 min-h-screen flex justify-center items-center">
       <div className="bg-white shadow-lg rounded-lg p-8 w-full max-w-3xl">
-        <h2 className="text-3xl font-bold text-indigo-700 mb-4">LegalBot Chat</h2>
+        <h2 className="text-3xl font-bold text-indigo-700 mb-4">LegalAI Chat</h2>
         <p className="text-gray-700 mb-4">
           Please interact with our chatbot below to ask your legal questions.
         </p>

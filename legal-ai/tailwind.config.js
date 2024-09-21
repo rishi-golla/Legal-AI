@@ -20,11 +20,12 @@ module.exports = {
     },
     extend: {
       colors:{
-        primary: "#1A1A1A",
-        accent: "#7F5AF0",
-        secondary:"#cbacf9",
-        textPrimary: "#FFFFFF",
-        textPrimary: "#E5E5E5"
+        primary: "var(--color-primary)",
+        secondary: "var(--color-secondary)",
+        accent: "var(--color-accent)",
+        textPrimary: "var(--color-text-primary)",
+        textSecondary: "var(--color-text-secondary)",
+        textAccent: "var(--color-text-accent)",
       },
     },
   },
