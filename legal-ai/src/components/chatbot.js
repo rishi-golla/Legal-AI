@@ -28,14 +28,14 @@ const Chatbot = () => {
   return (
     <section className="pt-20 min-h-screen flex justify-center items-center">
       <div className="bg-white shadow-lg rounded-lg p-8 w-full max-w-3xl">
-        <h2 className="text-3xl font-bold text-indigo-700 mb-4">LegalBot Chat</h2>
+        <h2 className="text-3xl font-bold text-indigo-700 mb-4">LegalAI Chat</h2>
         <p className="text-gray-700 mb-4">
           Please interact with our chatbot below to ask your legal questions.
         </p>
         
         <div className="bg-gray-200 p-4 rounded-md h-60 overflow-y-auto">
           {messages.length === 0 ? (
-            <p className="text-gray-500 italic">Chatbot coming soon...</p>
+            <p className="text-gray-500 italic">Send your first message, LegalAI will respond accordingly...</p>
           ) : (
             messages.map((msg, index) => (
               <div key={index} className={`mb-2 ${msg.sender === 'bot' ? 'text-purple-600' : 'text-white-600'}`}>
