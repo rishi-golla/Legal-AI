@@ -7,7 +7,7 @@ const teamMembers = [
   { name: 'Vladislav Kondratyev', role: 'Fullstack Developer + AI + PM', image: 'logo_vlad.png' },
   { name: 'Arnab Dev', role: 'Frontend Developer', image: '/arnab-t.png' },
   { name: 'Ankith Ganji', role: 'Backend Developer', image: 'ank.PNG' },
-  { name: 'Aryav Rastogi', role: 'Backend Developer', image: '../pic/' },
+  { name: 'Aryav Rastogi', role: 'Backend Developer', image: 'aryav.jpeg' },
 ];
 
 const About = () => {
