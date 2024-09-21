@@ -25,7 +25,7 @@ const Header = ({ setActiveSection }) => {
           onClick={() => setActiveSection("chatbot")}
         >
           <div className="w-10 h-10 bg-indigo-500 rounded-full flex items-center justify-center cursor-pointer transform transition-transform duration-300 ease-in-out hover:scale-110">
-            🤖
+            Chatbot 🤖
           </div>
           <div className="absolute -top-2 -right-2 w-4 h-4 bg-green-400 rounded-full animate-ping"></div>
         </div>
