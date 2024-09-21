@@ -5,7 +5,7 @@ const Header = ({ setActiveSection }) => {
   return (
     <header className="bg-gray-800 shadow-md fixed w-full top-0 left-0 z-10 flex justify-between items-center px-6 py-4">
       <h1 className="text-2xl font-bold text-purple-300 cursor-pointer" onClick={() => setActiveSection("home")}>
-        LegalBot
+        LegalAI
       </h1>
       <nav className="flex space-x-6">
         <button
