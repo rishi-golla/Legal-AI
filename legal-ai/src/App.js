@@ -31,6 +31,7 @@ function App() {
           {activeSection === "chatbot" && <Chatbot userInfo={userInfo} />}
           {activeSection === "contact" && <Contact setActiveSection={setActiveSection} />}
           {activeSection === "questions" && <Questions isOpen={true} onClose={() => setActiveSection("home")} handleSubmit={handleFormSubmit} />}
+          {activeSection === "experience" && <ExperienceComponent setActiveSection={setActiveSection} />}
         </div>
       </div>
       <Footer />
