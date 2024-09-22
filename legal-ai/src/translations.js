@@ -6,7 +6,7 @@ const translations = {
         contactUs: "Contact Us",
         chatNow: "Chat Now",
         legalAI: "LegalAI",
-        innovatingLegal: "Innovating <br /> Legal Assistance with AI",
+        innovatingLegal: "Innovating Legal Assistance with AI",
         legalGoal: "Our goal is to make legal knowledge accessible.",
         clickForChat: "Click on me for personalized chat!",
         aboutHead: "About LegalAI",
