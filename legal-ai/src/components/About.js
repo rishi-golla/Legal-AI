@@ -12,7 +12,7 @@ const teamMembers = [
 
 const About = () => {
   return (
-    <section className=" min-h-screen bg-primary text-textPrimary flex flex-col justify-center items-center px-6">
+    <section className="w-full h-auto bg-primary text-textPrimary flex flex-col justify-center items-center px-6 pb-[100px]">
       <div className="mb-10 w-full max-w-4xl p-6 border border-accent rounded-lg transform transition duration-500 hover:scale-105 shadow-lg" style={{ backgroundColor: 'rgba(0, 0, 0, 0.5)' }}>
         <h2 className="text-purple-300 text-4xl font-bold text-accent mb-4">About LegalAI</h2>
         <p className="text-purple-300 mb-4">
