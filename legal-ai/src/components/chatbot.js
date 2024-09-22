@@ -11,7 +11,7 @@ const client = new BedrockRuntimeClient({
   },
 });
 
-const Chatbot = () => {
+const Chatbot = ({userInfo}) => {
   const [messages, setMessages] = useState([]);
   const [input, setInput] = useState('');
 
@@ -25,7 +25,7 @@ const Chatbot = () => {
       const bodyContent = JSON.stringify({
         anthropic_version: "bedrock-2023-05-31",
         max_tokens: 2048,
-        system:"You are 'LegalAI', a very knowledgeable lawyer. You are only able to answer questions related to law and legal stuff. Switch your responses and vocabulary in such a way answer to people. Answer should be in chat form. Only answer questions related to law and legal stuff.",
+        system:"You are 'LegalAI', a very knowledgeable lawyer. You are only able to answer questions related to law and legal stuff. Switch your responses and vocabulary in such a way answer to people. Answer should be in chat form. Only answer questions related to law and legal stuff." + userInfo,
         messages: [
           {
             role: "user",

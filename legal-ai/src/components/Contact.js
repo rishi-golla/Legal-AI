@@ -31,7 +31,7 @@ const Contact = ({ setActiveSection }) => {
                   transition: { duration: 0.4, ease: "easeIn" },
               }}
           >
-              <div className="w-full sm:px-10 px-2 md:mt-[180px] flex flex-col  sm:gap-[30px] gap-[20px]">
+              <div className="w-full sm:px-10 px-2 mt-[180px] flex flex-col  sm:gap-[30px] gap-[20px]">
 
 
                   <div className="w-full mb-8 xl:mb-0">

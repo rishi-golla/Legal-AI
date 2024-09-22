@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
-const Questions = ({ isOpen, onClose }) => {
+const Questions = ({ isOpen, onClose, handleSubmit }) => {
     const [step, setStep] = useState(1);
     const [gender, setGender] = useState('');
     const [ageGroup, setAgeGroup] = useState('');
@@ -26,8 +26,8 @@ const Questions = ({ isOpen, onClose }) => {
         if (step === 1) {
             setStep(2);
         } else {
-            console.log({ gender, ageGroup, background });
-            onClose();
+            const userInfoSentence = `I, your user, am a person of gender: ${gender} in age group ${ageGroup} and my situation is best described as: ${background.replace('_', ' ')}.`;
+            handleSubmit(userInfoSentence);
         }
     };
 
