@@ -9,21 +9,21 @@ const Home = ({ setActiveSection, language }) => {
   const { ref: hackathonRef, inView: hackathonInView } = useInView({ threshold: 0.5 });
 
   // Create the text you want to animate
-  const text = translations[language].clickForChat;
-  const [displayedText, setDisplayedText] = useState('');
+  // const text = translations[language].clickForChat;
+  // const [displayedText, setDisplayedText] = useState('');
 
-  useEffect(() => {
-    let index = 0;
-    const interval = setInterval(() => {
-      setDisplayedText((prev) => prev + text[index]);
-      index++;
-      if (index === text.length) {
-        clearInterval(interval);
-      }
-    }, 100); // Adjust the speed (100ms per letter)
+  // useEffect(() => {
+  //   let index = 0;
+  //   const interval = setInterval(() => {
+  //     setDisplayedText((prev) => prev + text[index]);
+  //     index++;
+  //     if (index === text.length) {
+  //       clearInterval(interval);
+  //     }
+  //   }, 100); // Adjust the speed (100ms per letter)
 
-    return () => clearInterval(interval);
-  }, [text]);
+  //   return () => clearInterval(interval);
+  // }, [text]);
 
   return (
     <section className=" min-h-screen bg-primary text-textPrimary flex flex-col justify-center items-center text-center space-y-8">
@@ -53,7 +53,7 @@ const Home = ({ setActiveSection, language }) => {
             {displayedText}
           </motion.div> */}
           <div className='hover:scale-105 duration-150 bg-[#00000080] hover:bg-purple-300 hover:text-black absolute top-0 right-0 rounded-full md:p-4 py-2 px-3 md:text-[16px] text-[14px] text-purple-300'>
-            {displayedText}
+            {translations[language].clickForChat}
           </div> 
 
           <div className='duration-150 bg-[#00000080] hover:text-black absolute top-[60px] right-[145px] rounded-full p-4 text-purple-300'>
