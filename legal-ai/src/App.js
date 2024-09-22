@@ -9,6 +9,7 @@ import Contact from './components/Contact';
 import Questions from './components/Questions';
 import Template from './components/Template';
 import translations from './translations'; // Import the translations
+import ExperienceComponent from './components/Experience';
 
 function App() {
   const [activeSection, setActiveSection] = useState("home");
@@ -33,7 +34,9 @@ function App() {
           {activeSection === "contact" && <Contact setActiveSection={setActiveSection} />}
           {activeSection === "questions" && <Questions isOpen={true} onClose={() => setActiveSection("home")} handleSubmit={handleFormSubmit} />}
           {activeSection === "Template" && <Template />}
+          {activeSection === "experience" && <ExperienceComponent language={language} />}
         </div>
+        
       </div>
       <Footer />
     </div>

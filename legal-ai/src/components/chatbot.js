@@ -2,6 +2,8 @@ import React, { useState, useCallback } from 'react';
 import { BedrockRuntimeClient, InvokeModelCommand } from "@aws-sdk/client-bedrock-runtime";
 import Messages from './Messages';
 import InputField from './InputField';
+import { VscDebugRestart } from "react-icons/vsc";
+import { FaDownload } from "react-icons/fa";
 
 const client = new BedrockRuntimeClient({
   region: "us-east-1",
@@ -79,7 +81,7 @@ const Chatbot = ({userInfo}) => {
 
   return (
     <section className=" flex justify-center items-center w-full">
-      <div className="bg-transparent shadow-lg rounded-lg px-8 w-full flex justify-center flex-col">
+      <div className="bg-transparent shadow-lg rounded-lg px-8 w-full flex justify-center items-center flex-col">
         <div className="flex items-center justify-center flex-col">
           <img
             src="/logo.png"
@@ -94,23 +96,23 @@ const Chatbot = ({userInfo}) => {
         <Messages messages={messages}/>
         
         {/* Input and Buttons Container */}
-        <div className="flex items-center mt-4">
+        <div className="flex items-center justify-center mt-4">
           {/* Input Field */}
           <InputField input={input} onInputChange={setInput} onSend={handleSend} />
 
           {/* Buttons */}
-          <div className="flex ml-2">
+          <div className="ml-4 pt-3 justify-center items-center flex flex-row gap-2">
             <button
               onClick={handleDownloadChat}
-              className="text-white border border-purple-500 bg-transparent px-2 py-1 rounded hover:bg-purple-500 hover:text-white transition duration-300"
+              className="text-white bg-transparent text-[20px] rounded hover:bg-purple-500 hover:text-white transition duration-300"
             >
-              Download Chat
+              <FaDownload/>
             </button>
             <button
               onClick={handleNewConversation}
-              className="ml-2 text-white border border-purple-500 bg-transparent px-2 py-1 rounded hover:bg-purple-500 hover:text-white transition duration-300"
+              className="ml-2 text-white bg-transparent text-[20px]  rounded hover:bg-purple-500 hover:text-white transition duration-300"
             >
-              New Conversation
+              <VscDebugRestart/>
             </button>
           </div>
         </div>
