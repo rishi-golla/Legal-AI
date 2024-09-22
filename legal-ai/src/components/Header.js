@@ -51,13 +51,13 @@ const Header = ({ setActiveSection, language, setLanguage }) => {
         >
 
         
-          {translations[language].home}
+          {translations[language].about}
         </button>
         <button
           className="text-purple-300 hover:opacity-80 transition-all duration-150"
-          onClick={() => setActiveSection("Experience")}
+          onClick={() => setActiveSection("experience")}
         >
-          {translations[language].about}
+          {translations[language].experience}
         </button>
       </nav>
       <div className="flex items-center space-x-2">
