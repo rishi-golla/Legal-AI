@@ -1,30 +1,42 @@
-import React from 'react';
+
+
+
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import About from './About';
 import { useInView } from 'react-intersection-observer';
+import Questions from './Questions';
 
 const Home = ({ setActiveSection }) => {
   const { ref: goalRef, inView: goalInView } = useInView({ threshold: 0.5 });
   const { ref: hackathonRef, inView: hackathonInView } = useInView({ threshold: 0.5 });
+  
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
     <section className="pt-40 min-h-screen bg-primary text-textPrimary flex flex-col justify-center items-center text-center space-y-8">
+      <Questions isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
+      
       <div className='flex flex-col lg:flex-row h-auto lg:min-h-screen w-full lg:justify-center lg:items-start'>
-        {/* Left Section (Image) */}
         <motion.div
           initial={{ x: '-100%', opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
-          transition={{ duration: 1 }}
-          className='relative w-full lg:w-1/3 flex justify-center items-center p-5'
+          transition={{ duration: 1}}
+          className='left relative w-1/3 lg:flex hidden items-center justify-center pt-10'
         >
           <img
             src='lawyer.png'
             alt='Lawyer'
-            className='max-w-full max-h-[600px] object-contain'
+            className='w-auto h-auto max-h-[600px] object-contain cursor-pointer hover:scale-110 duration-150'
+            onClick={() => setIsModalOpen(true)}
           />
-          <button className='hover:scale-105 duration-150 bg-[#00000080] hover:bg-purple-300 hover:text-black absolute top-5 right-5 rounded-full p-4 text-purple-300' onClick={() => setActiveSection("chatbot")}>
-            Click to start!
+          <button className='hover:scale-105 duration-150 bg-[#00000080] hover:bg-purple-300 hover:text-black absolute top-0 right-0 rounded-full p-4 text-purple-300' onClick={() => setIsModalOpen(true)}>
+            Click on me for personalized chat!
           </button>
+          <div className='duration-150 bg-[#00000080]  hover:text-black absolute top-[60px] right-[145px] rounded-full p-4 text-purple-300'>
+          </div>
+          <div className='duration-150 bg-[#00000080]  hover:text-black absolute top-[90px] right-[180px] rounded-full p-2 text-purple-300'>
+          </div>
         </motion.div>
       
         <div className='flex flex-col gap-5 w-full lg:w-2/3 p-5'>
@@ -35,6 +47,7 @@ const Home = ({ setActiveSection }) => {
             className='w-full flex flex-col gap-5 justify-center'
           >
             <div className="animate-fade-in w-full p-6 bg-primary border border-accent rounded-lg transform transition duration-500 hover:scale-105 shadow-lg">
+
               <h2 className="text-purple-300 text-4xl md:text-5xl font-bold text-accent mb-4 leading-tight">
                 Innovating <br /> Legal Assistance with AI
               </h2>
@@ -43,20 +56,20 @@ const Home = ({ setActiveSection }) => {
               </p>
             </div>
           </motion.div>
-          
+
           <motion.div
             initial={{ x: '100%', opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.5 }}
+            transition={{ duration: 0.8, delay: 1.2 }}
             className='w-full flex flex-col gap-5 justify-center'
           >
-            <div className="animate-fade-in w-full p-6 border border-accent rounded-lg transform transition duration-500 hover:scale-105 shadow-lg" style={{ backgroundColor: 'rgba(0, 0, 0, 0.5)' }}>
+            <div className="w-full p-6 border border-accent rounded-lg transform transition duration-500 hover:scale-105 shadow-lg" style={{ backgroundColor: 'rgba(0, 0, 0, 0.5)' }}>
               <p className="text-purple-300 text-lg">
                 Our goal is to make legal knowledge accessible, reliable, and efficient for everyone, by utilizing the latest advancements in AI technology.
               </p>
             </div>
           </motion.div>
-          
+
           <motion.div
             initial={{ x: '100%', opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
@@ -106,3 +119,4 @@ const Home = ({ setActiveSection }) => {
 };
 
 export default Home;
+

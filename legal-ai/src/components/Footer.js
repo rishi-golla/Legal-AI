@@ -2,7 +2,7 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    <footer className="w-full bg-black text-textPrimary p-4 opacity-80 fixed bottom-0 left-0 z-50">
+    <footer className="w-full text-textPrimary p-3 opacity-80 fixed bottom-0 left-0 z-50">
       <div className="flex flex-col md:flex-row justify-between items-center max-w-6xl mx-auto">
         <p className="text-gray-400 mb-4 md:mb-0">&copy; 2024 LegalAI. All rights reserved.</p>
         <div className="flex space-x-4">
