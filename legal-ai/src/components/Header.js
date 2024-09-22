@@ -49,6 +49,14 @@ const Header = ({ setActiveSection, language, setLanguage }) => {
           className="text-purple-300 hover:opacity-80 transition-all duration-150"
           onClick={() => setActiveSection("about")}
         >
+
+        >
+          {translations[language].home}
+        </button>
+        <button
+          className="text-purple-300 hover:opacity-80 transition-all duration-150"
+          onClick={() => setActiveSection("Experience")}
+        >
           {translations[language].about}
         </button>
       </nav>
