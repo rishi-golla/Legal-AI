@@ -24,12 +24,12 @@ const About = ({language}) => {
       <h3 className="text-purple-300 text-3xl font-semibold text-accent mb-8"> {translations[language].team}</h3>
       <div className="flex items-center justify-center flex-wrap gap-4 w-[95%]">
         {teamMembers.map((member, index) => (
-          <div key={index} className="flex items-center justify-center  flex-col p-4 bg-black border rounded-lg shadow-lg transform hover:scale-105 transition duration-300">
+          <div key={index} className="w-[250px] h-[360px] flex items-center justify-center flex-col p-4 bg-black border rounded-lg shadow-lg transform hover:scale-105 transition duration-300">
             <Photo imgSrc={member.image} />
             <h4 className="text-purple-300 text-xl font-bold text-accent">{member.name}</h4>
-            <p className="text-purple-300">{member.role}</p>
+            <p className="text-purple-300 text-wrap">{member.role}</p>
             <a href={member.linkedin} target="_blank" rel="noopener noreferrer">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn" className="w-6 h-6 hover:opacity-75" />
+            <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn" className="mt-2 w-6 h-6 hover:opacity-75" />
             </a>
           
           </div>

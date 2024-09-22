@@ -19,7 +19,7 @@ const Photo = ({ imgSrc }) => {
     }, [controls, inView]);
 
     return (
-        <div ref={ref} className="h-full w-full relative mb-5">
+        <div ref={ref} className="h-full w-full relative mb-5 flex items-center justify-center">
             <motion.div
                 initial={{ opacity: 0 }}
                 animate={controls}  // Controlled by the Intersection Observer
