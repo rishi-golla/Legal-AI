@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import translations from '../translations'; // Import translations
+import translations from '../translations';
 
 const Header = ({ setActiveSection, language, setLanguage }) => {
   const [hidden, setHidden] = useState(false);
@@ -49,8 +49,6 @@ const Header = ({ setActiveSection, language, setLanguage }) => {
           className="text-purple-300 hover:opacity-80 transition-all duration-150"
           onClick={() => setActiveSection("about")}
         >
-
-        
           {translations[language].home}
         </button>
         <button
@@ -58,6 +56,13 @@ const Header = ({ setActiveSection, language, setLanguage }) => {
           onClick={() => setActiveSection("Experience")}
         >
           {translations[language].about}
+        </button>
+        
+        <button
+          className="text-purple-300 hover:opacity-80 transition-all duration-150"
+          onClick={() => setActiveSection("Template")}
+        >
+          Template
         </button>
       </nav>
       <div className="flex items-center space-x-2">
