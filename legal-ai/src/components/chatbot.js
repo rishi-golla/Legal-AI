@@ -60,6 +60,21 @@ const Chatbot = ({userInfo}) => {
   
     setInput('');
   }, [input]);
+
+  const handleDownloadChat = () => {
+    const chatContent = messages
+      .map((msg) => `${msg.sender === 'user' ? 'You' : 'LegalAI'}: ${msg.text}`)
+      .join('\n');
+    const blob = new Blob([chatContent], { type: 'text/plain' });
+    const link = document.createElement('a');
+    link.href = URL.createObjectURL(blob);
+    link.download = 'chat.txt';
+    link.click();
+  };
+
+  const handleNewConversation = () => {
+    setMessages([]);
+  };
   
 
   return (
@@ -67,7 +82,7 @@ const Chatbot = ({userInfo}) => {
       <div className="bg-transparent shadow-lg rounded-lg px-8 w-full flex justify-center flex-col">
         <div className="flex items-center justify-center flex-col">
           <img
-            src="https://cdn.discordapp.com/attachments/1286831898147946639/1286847170938667048/logo.png?ex=66ef6552&is=66ee13d2&hm=5a6f86b8d67930ea0c671e0edab662f06f3f61868b6431567e80f5d128c4f99e&"
+            src="/logo.png"
             alt="logo"
             className="h-8 w-8"
           />
@@ -76,13 +91,29 @@ const Chatbot = ({userInfo}) => {
         </div>
         
         
-        <Messages messages={messages} />
+        <Messages messages={messages}/>
         
-        <InputField 
-          input={input} 
-          onInputChange={setInput} 
-          onSend={handleSend} 
-        />
+        {/* Input and Buttons Container */}
+        <div className="flex items-center mt-4">
+          {/* Input Field */}
+          <InputField input={input} onInputChange={setInput} onSend={handleSend} />
+
+          {/* Buttons */}
+          <div className="flex ml-2">
+            <button
+              onClick={handleDownloadChat}
+              className="text-white border border-purple-500 bg-transparent px-2 py-1 rounded hover:bg-purple-500 hover:text-white transition duration-300"
+            >
+              Download Chat
+            </button>
+            <button
+              onClick={handleNewConversation}
+              className="ml-2 text-white border border-purple-500 bg-transparent px-2 py-1 rounded hover:bg-purple-500 hover:text-white transition duration-300"
+            >
+              New Conversation
+            </button>
+          </div>
+        </div>
       </div>
     </section>
   );
