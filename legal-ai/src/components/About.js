@@ -1,6 +1,8 @@
 "use client";
 import React from 'react';
 import Photo from './Photo';
+import translations from '../translations'; // Import translations
+
 
 const teamMembers = [
   { name: 'Rishi Golla', role: 'Fullstack Developer + PM', image: 'rishi.jpeg', linkedin: 'https://www.linkedin.com/in/rishi-golla/', instagram: 'https://www.instagram.com/rishi.golla_/?hl=en' },
@@ -10,16 +12,16 @@ const teamMembers = [
   { name: 'Aryav Rastogi', role: 'Backend Developer', image: 'aryav.jpeg', linkedin: 'https://www.linkedin.com/in/aryavrastogi/', instagram: 'https://www.instagram.com/aryavrasto/?hl=en' },
 ];
 
-const About = () => {
+const About = ({language}) => {
   return (
     <section className="w-full h-auto bg-primary text-textPrimary flex flex-col justify-center items-center px-6 pb-[100px]">
       <div className="mb-10 w-full max-w-4xl p-6 border border-accent rounded-lg transform transition duration-500 hover:scale-105 shadow-lg" style={{ backgroundColor: 'rgba(0, 0, 0, 0.5)' }}>
-        <h2 className="text-purple-300 text-4xl font-bold text-accent mb-4">About LegalAI</h2>
+        <h2 className="text-purple-300 text-4xl font-bold text-accent mb-4">{translations[language].aboutHead}</h2>
         <p className="text-purple-300 mb-4">
-          This project, born out of a Hackathon initiative, aims to revolutionize legal assistance by making it more accessible and efficient through the power of AI.
-          </p>
+          {translations[language].aboutDescription}
+        </p>
       </div>
-      <h3 className="text-purple-300 text-3xl font-semibold text-accent mb-8">Meet the Team</h3>
+      <h3 className="text-purple-300 text-3xl font-semibold text-accent mb-8"> {translations[language].team}</h3>
       <div className="flex items-center justify-center flex-wrap gap-4 w-[95%]">
         {teamMembers.map((member, index) => (
           <div key={index} className="flex items-center justify-center  flex-col p-4 bg-black border rounded-lg shadow-lg transform hover:scale-105 transition duration-300">

@@ -2,13 +2,14 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import About from './About';
 import { useInView } from 'react-intersection-observer';
+import translations from '../translations'; // Import translations
 
-const Home = ({ setActiveSection }) => {
+const Home = ({ setActiveSection, language }) => {
   const { ref: goalRef, inView: goalInView } = useInView({ threshold: 0.5 });
   const { ref: hackathonRef, inView: hackathonInView } = useInView({ threshold: 0.5 });
 
   // Create the text you want to animate
-  const text = "Click on me for personalized chat!";
+  const text = translations[language].clickForChat;
   const [displayedText, setDisplayedText] = useState('');
 
   // Typing effect logic
@@ -43,7 +44,7 @@ const Home = ({ setActiveSection }) => {
           />
 
           {/* Motion div for the typewriter effect */}
-          <motion.div
+          {/* <motion.div
             className='hover:scale-105 duration-150 bg-[#00000080] hover:bg-purple-300 hover:text-black absolute top-0 right-0 rounded-full md:p-4 py-2 px-3 md:text-[16px] text-[14px] text-purple-300'
             onClick={() => setActiveSection("questions")}
             initial={{ opacity: 0 }}
@@ -51,7 +52,10 @@ const Home = ({ setActiveSection }) => {
             transition={{ delay: 1, duration: 0.5 }}
           >
             {displayedText}
-          </motion.div>
+          </motion.div> */}
+          <div className='hover:scale-105 duration-150 bg-[#00000080] hover:bg-purple-300 hover:text-black absolute top-0 right-0 rounded-full md:p-4 py-2 px-3 md:text-[16px] text-[14px] text-purple-300'>
+            {displayedText}
+          </div>
 
           <div className='duration-150 bg-[#00000080] hover:text-black absolute top-[60px] right-[145px] rounded-full p-4 text-purple-300'>
           </div>
@@ -68,10 +72,10 @@ const Home = ({ setActiveSection }) => {
           >
             <div className="animate-fade-in w-full p-6 bg-primary border border-accent rounded-lg transform transition duration-500 hover:scale-105 shadow-lg">
               <h2 className="text-purple-300 text-4xl md:text-5xl font-bold text-accent mb-4 leading-tight">
-                Innovating <br /> Legal Assistance with AI
+                {translations[language].innovatingLegal} 
               </h2>
               <p className="text-purple-300 text-lg">
-                LegalAI provides cutting-edge AI solutions to answer your legal questions quickly and accurately.
+                {translations[language].legalGoal}
               </p>
             </div>
           </motion.div>
@@ -84,7 +88,7 @@ const Home = ({ setActiveSection }) => {
           >
             <div className="w-full p-6 border border-accent rounded-lg transform transition duration-500 hover:scale-105 shadow-lg" style={{ backgroundColor: 'rgba(0, 0, 0, 0.5)' }}>
               <p className="text-purple-300 text-lg">
-                Our goal is to make legal knowledge accessible, reliable, and efficient for everyone, by utilizing the latest advancements in AI technology.
+                {translations[language].goal}
               </p>
             </div>
           </motion.div>
@@ -97,7 +101,7 @@ const Home = ({ setActiveSection }) => {
           >
             <div className="w-full p-6 border border-accent rounded-lg transform transition duration-500 hover:scale-105 shadow-lg" style={{ backgroundColor: 'rgba(0, 0, 0, 0.5)' }}>
               <p className="text-purple-300 text-lg">
-                Join us on our mission to revolutionize the legal landscape by providing free access to high-quality legal assistance.
+                {translations[language].join}
               </p>
             </div>
           </motion.div>
@@ -112,9 +116,9 @@ const Home = ({ setActiveSection }) => {
         className="w-full max-w-4xl p-6 border border-accent rounded-lg transform transition duration-500 hover:scale-105 shadow-lg"
         style={{ backgroundColor: 'rgba(0, 0, 0, 0.5)' }}
       >
-        <h2 className="text-purple-300 text-4xl font-bold mb-4">Our Goal</h2>
+        <h2 className="text-purple-300 text-4xl font-bold mb-4">{translations[language].goalHead}</h2>
         <p className="text-purple-300 text-lg">
-          To democratize legal information by providing AI-driven solutions, ensuring that everyone has access to accurate and timely legal assistance, regardless of their background.
+          {translations[language].goalDescription}
         </p>
       </motion.div>
 
@@ -126,13 +130,13 @@ const Home = ({ setActiveSection }) => {
         className="w-full max-w-4xl p-6 border border-accent rounded-lg transform transition duration-500 hover:scale-105 shadow-lg"
         style={{ backgroundColor: 'rgba(0, 0, 0, 0.5)' }}
       >
-        <h2 className="text-purple-300 text-4xl font-bold mb-4">Hackathon Details</h2>
+        <h2 className="text-purple-300 text-4xl font-bold mb-4">{translations[language].detailsHead}</h2>
         <p className="text-purple-300 text-lg">
-          We recently participated in a 48-hour hackathon, developing an AI-powered chatbot designed to provide quick legal advice. This project showcases our commitment to leveraging technology to make legal assistance accessible.
+          {translations[language].detailsDescription}
         </p>
       </motion.div>
 
-      <About />
+      <About language={language} />
     </section>
   );
 };
