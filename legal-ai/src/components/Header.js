@@ -50,7 +50,7 @@ const Header = ({ setActiveSection, language, setLanguage }) => {
           onClick={() => setActiveSection("about")}
         >
 
-        >
+        
           {translations[language].home}
         </button>
         <button
