@@ -55,7 +55,7 @@ const Home = ({ setActiveSection, language }) => {
           </motion.div> */}
           <div className='hover:scale-105 duration-150 bg-[#00000080] hover:bg-purple-300 hover:text-black absolute top-0 right-0 rounded-full md:p-4 py-2 px-3 md:text-[16px] text-[14px] text-purple-300'>
             {displayedText}
-          </div>
+          </div> 
 
           <div className='duration-150 bg-[#00000080] hover:text-black absolute top-[60px] right-[145px] rounded-full p-4 text-purple-300'>
           </div>
