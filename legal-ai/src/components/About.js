@@ -2,6 +2,8 @@
 import React from 'react';
 import Photo from './Photo';
 import translations from '../translations'; // Import translations
+import { useInView } from 'react-intersection-observer';
+import { motion } from 'framer-motion';
 
 
 const teamMembers = [
@@ -13,14 +15,20 @@ const teamMembers = [
 ];
 
 const About = ({language}) => {
+  const { ref: hackathonRef, inView: hackathonInView } = useInView({ threshold: 0.5 });
+
   return (
     <section className="w-full h-auto bg-primary text-textPrimary flex flex-col justify-center items-center px-6 pb-[100px]">
-      <div className="mb-10 w-full max-w-4xl p-6 border border-accent rounded-lg transform transition duration-500 hover:scale-105 shadow-lg" style={{ backgroundColor: 'rgba(0, 0, 0, 0.5)' }}>
+      <motion.div
+        ref={hackathonRef}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: hackathonInView ? 1 : 0 }}
+        transition={{ duration: 1 }} className="mb-10 w-full max-w-4xl p-6 border border-accent rounded-lg transform transition duration-500 hover:scale-105 shadow-lg" style={{ backgroundColor: 'rgba(0, 0, 0, 0.5)' }}>
         <h2 className="text-purple-300 text-4xl font-bold text-accent mb-4">{translations[language].aboutHead}</h2>
         <p className="text-purple-300 mb-4">
           {translations[language].aboutDescription}
         </p>
-      </div>
+      </motion.div>
       <h3 className="text-purple-300 text-3xl font-semibold text-accent mb-8"> {translations[language].team}</h3>
       <div className="flex items-center justify-center flex-wrap gap-4 w-[95%]">
         {teamMembers.map((member, index) => (

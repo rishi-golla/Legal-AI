@@ -40,13 +40,13 @@ const Header = ({ setActiveSection, language, setLanguage }) => {
       </div>
       <nav className="md:flex hidden space-x-6 mx-auto">
         <button
-          className="text-purple-300 hover:opacity-80 transition-all duration-150"
+          className="text-purple-300 hover:opacity-80 duration-300 "
           onClick={() => setActiveSection("home")}
         >
           {translations[language].home}
         </button>
         <button
-          className="text-purple-300 hover:opacity-80 transition-all duration-150"
+          className="text-purple-300 hover:opacity-80 duration-300 "
           onClick={() => setActiveSection("about")}
         >
 
@@ -54,14 +54,14 @@ const Header = ({ setActiveSection, language, setLanguage }) => {
           {translations[language].about}
         </button>
         <button
-          className="text-purple-300 hover:opacity-80 transition-all duration-150"
+          className="text-purple-300 hover:opacity-80 duration-300 "
           onClick={() => setActiveSection("experience")}
         >
           {translations[language].experience}
         </button>
         
         <button
-          className="text-purple-300 hover:opacity-80 transition-all duration-150"
+          className="text-purple-300 hover:opacity-80 duration-300 "
           onClick={() => setActiveSection("Template")}
         >
           Document Templates
@@ -69,23 +69,27 @@ const Header = ({ setActiveSection, language, setLanguage }) => {
       </nav>
       <div className="flex items-center space-x-2">
         <button
-          className='bg-gradient-to-r from-purple-800 to-purple-500 text-purple-300 rounded-lg py-2 px-4'
+          className='hover:opacity-80 duration-300  bg-gradient-to-r from-purple-800 to-purple-500 text-purple-300 rounded-lg py-2 px-4'
           onClick={() => setActiveSection("chatbot")}
         >
           {translations[language].chatNow}
         </button>
         <button
-          className='bg-gradient-to-r from-purple-800 to-purple-300 bg-clip-text text-transparent text-purple-300 border-2 border-purple-300 rounded-lg py-2 px-4'
+          className='hover:opacity-80 duration-300 bg-gradient-to-r from-purple-800 to-purple-300 bg-clip-text text-transparent text-purple-300 border-2 border-purple-300 rounded-lg py-2 px-4'
           onClick={() => setActiveSection("contact")}
         >
           {translations[language].contactUs}
         </button>
         <button
-          className="ml-4 text-purple-300"
+          className=" hover:opacity-80 duration-300 translation ml-4 text-purple-300 border-transparent border-b-2 hover:border-purple-300"
           onClick={toggleLanguage}
         >
           {language === 'en' ? 'Español' : 'English'}
         </button>
+
+
+
+
       </div>
     </header>
   );
