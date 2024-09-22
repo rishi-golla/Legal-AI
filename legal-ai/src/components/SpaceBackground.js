@@ -15,7 +15,7 @@ const SpaceBackground = () => {
 
       star.style.top = `${Math.random() * 100}vh`;
       star.style.left = `${Math.random() * 100}vw`;
-      star.style.animationDuration = `${Math.random() * 4 + 2}s`;
+      star.style.animationDuration = `${Math.random() * 2 + 1}s`;
 
       space.appendChild(star);
     }

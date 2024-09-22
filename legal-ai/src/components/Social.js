@@ -7,11 +7,11 @@ import {
 } from "react-icons/fa";
 
 const socials = [
-    { icon: <FaLinkedin />, path: "https://www.linkedin.com/in/arnabdev/" },
-    { icon: <FaFacebook />, path: "https://www.facebook.com/arnabdev6" },
-    { icon: <FaGithub />, path: "https://github.com/arnabdev1" },
-    { icon: <FaInstagram />, path: "https://www.instagram.com/arnabde__v8/" },
-    { icon: <FaTwitter />, path: "https://x.com/arnaabdev" },
+    { icon: <FaLinkedin />, path: "https://www.linkedin.comhttps://www.linkedin.com/in/vladislav-kondratyev/details/projects/" },
+    { icon: <FaFacebook />, path: "https://www.facebook.com" },
+    { icon: <FaGithub />, path: "https://github.com/rishi-golla/Legal-AI" },
+    { icon: <FaInstagram />, path: "https://www.instagram.com/legal.ai_/" },
+    { icon: <FaTwitter />, path: "https://x.com" },
 ];
 
 const Social = ({ containerStyles, iconStyles }) => {
