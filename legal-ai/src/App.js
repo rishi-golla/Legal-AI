@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Header from './components/Header';
 import Home from './components/Home';
 import About from './components/About';
@@ -7,31 +7,32 @@ import Footer from './components/Footer';
 import SpaceBackground from './components/SpaceBackground';
 import Contact from './components/Contact';
 import Questions from './components/Questions';
+import translations from './translations'; // Import the translations
 
 function App() {
-  const [activeSection, setActiveSection] = React.useState("home");
-  const [userInfo, setUserInfo] = React.useState(''); // State to store the sentence
+  const [activeSection, setActiveSection] = useState("home");
+  const [userInfo, setUserInfo] = useState('');
+  const [language, setLanguage] = useState('en'); // Language state
 
   const handleFormSubmit = (sentence) => {
-    setUserInfo(sentence); 
+    setUserInfo(sentence);
     setActiveSection("chatbot");
     console.log(sentence);
   };
+
   return (
-    <div className="relative bg-primary  overflow-y-auto">
+    <div className="relative bg-primary overflow-y-auto">
       <SpaceBackground />
       <div className='px-3 py-6 min-h-screen'>
-        <Header setActiveSection={setActiveSection} />
+        <Header setActiveSection={setActiveSection} language={language} setLanguage={setLanguage} />
         <div className="pt-[100px]">
-          {activeSection === "home" && <Home setActiveSection={setActiveSection} />}
-          {activeSection === "about" && <About />}
+          {activeSection === "home" && <Home setActiveSection={setActiveSection} language={language} />}
+          {activeSection === "about" && <About language={language} />}
           {activeSection === "chatbot" && <Chatbot userInfo={userInfo} />}
           {activeSection === "contact" && <Contact setActiveSection={setActiveSection} />}
           {activeSection === "questions" && <Questions isOpen={true} onClose={() => setActiveSection("home")} handleSubmit={handleFormSubmit} />}
         </div>
-        
       </div>
-      
       <Footer />
     </div>
   );
