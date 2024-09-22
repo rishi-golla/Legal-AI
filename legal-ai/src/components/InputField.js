@@ -4,7 +4,7 @@ import { FaArrowUp } from "react-icons/fa";
 const InputField = ({ input, onInputChange, onSend }) => {
   return (
     <form onSubmit={onSend} className="mt-4 flex w-full justify-center items-center">
-      <div className='md:w-[700px] w-full rounded-full border-[4px] justify-between flex'>
+      <div className='md:w-[700px] w-full rounded-full border-2 border-white justify-between flex'>
         <input
           type="text"
           value={input}
@@ -16,6 +16,7 @@ const InputField = ({ input, onInputChange, onSend }) => {
           <FaArrowUp />
         </button>
       </div>
+      
       
     </form>
   );

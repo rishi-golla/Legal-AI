@@ -12,7 +12,6 @@ const Home = ({ setActiveSection, language }) => {
   const text = translations[language].clickForChat;
   const [displayedText, setDisplayedText] = useState('');
 
-  // Typing effect logic
   useEffect(() => {
     let index = 0;
     const interval = setInterval(() => {
