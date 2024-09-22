@@ -63,10 +63,18 @@ const Chatbot = ({userInfo}) => {
   
 
   return (
-    <section className="pt-20 min-h-screen flex justify-center items-center">
-      <div className="bg-white shadow-lg rounded-lg p-8 w-full max-w-3xl">
-        <h2 className="text-3xl font-bold text-indigo-700 mb-4">LegalAI Chat</h2>
-        <p className="text-gray-700 mb-4">Please interact with our chatbot below to ask your legal questions.</p>
+    <section className=" flex justify-center items-center w-full">
+      <div className="bg-transparent shadow-lg rounded-lg px-8 w-full flex justify-center flex-col">
+        <div className="flex items-center justify-center flex-col">
+          <img
+            src="https://cdn.discordapp.com/attachments/1286831898147946639/1286847170938667048/logo.png?ex=66ef6552&is=66ee13d2&hm=5a6f86b8d67930ea0c671e0edab662f06f3f61868b6431567e80f5d128c4f99e&"
+            alt="logo"
+            className="h-8 w-8"
+          />
+          <p className=" text-white">Mike</p>
+          <p className=" text-white opacity-70 text-[12px]">By Shower Champions</p>
+        </div>
+        
         
         <Messages messages={messages} />
         
