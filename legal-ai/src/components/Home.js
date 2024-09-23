@@ -30,7 +30,7 @@ const Home = ({ setActiveSection, language }) => {
   return (
     <section className="min-h-screen bg-primary text-textPrimary flex flex-col justify-center items-center text-center space-y-8 w-full">
 
-      <div className='flex flex-col lg:flex-row h-auto lg:min-h-screen w-full lg:justify-center lg:items-start'>
+      <div className='flex flex-col lg:flex-row h-auto w-full lg:justify-center lg:items-start'>
         <motion.div
           initial={{ x: '-100%', opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
