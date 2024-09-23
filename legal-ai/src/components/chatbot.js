@@ -174,7 +174,7 @@ const Chatbot = ({ userInfo }) => {
           <div className="ml-4 pt-3 justify-center items-center flex flex-row gap-2">
           {!pdfUploaded && (
             <>
-              <label htmlFor="pdf-upload" className="cursor-pointer">
+              <label htmlFor="pdf-upload" className="cursor-pointer text-white text-[30px]">
                 <AiOutlineUpload className="...styles..." />
               </label>
               <input
@@ -187,10 +187,10 @@ const Chatbot = ({ userInfo }) => {
             </>
           )}
           {pdfUploaded && (
-            <div className="flex items-center">
+              <div className="flex items-center text-white ">
               <AiOutlineCheckCircle className="...styles..." />
-              <span className="text-white ml-1">{pdfFileName}</span>
-              <button onClick={handleRemovePdf}>
+                <span className="text-white ml-1 text-[15px] mr-2">{pdfFileName}</span>
+                <button onClick={handleRemovePdf} className='text-[30px]'>
                 <AiOutlineCloseCircle className="...styles..." />
               </button>
             </div>
