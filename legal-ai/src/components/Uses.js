@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { motion, useAnimation } from "framer-motion";
-
+import './index.css';
 const sections = {
     "Students": (
         <div>
@@ -88,6 +88,27 @@ const App = () => {
             </p>
 
             {/* Navigation Section */}
+            {/* <div>
+                <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{
+                        opacity: 1,
+                        transition: { delay: 0.4, duration: 3, ease: "easeIn" },
+                    }}
+                    className="container sm:w-[605px] sm:p-4 w-[95vw] p-2 text-white"
+                >
+                    giuwerhgiuewrhui
+                </motion.div>
+                <p className="developer text-center mt-2">
+                    Developed by{" "}
+                    <a
+                        href="https://arnabdev.netlify.app/"
+                        className="font-semibold text-[#ff3399]"
+                    >
+                        Arnab Dev
+                    </a>
+                </p>
+            </div> */}
             <div className="flex space-x-4 border-b-2 border-purple-300 mb-8  flex-row items-center justify-between">
                 {Object.keys(sections).map((section) => (
                     <button
@@ -95,7 +116,7 @@ const App = () => {
                         onClick={() => setActiveSection(section)}
                         className={`text-lg pb-2 ${activeSection === section
                                 ? "text-white px-3 py-2 border-2 font-semibold border-purple-300 rounded-md"
-                                : "text-white opacity-80 hover:text-black"
+                                : "text-white opacity-80 hover:opacity-100 duration-200"
                             }`}
                     >
                         {section}
@@ -110,7 +131,7 @@ const App = () => {
                 animate="visible"
                 exit="hidden"
                 variants={sectionVariants}
-                className="text-lg"
+                className="container text-lg py-10"
             >
                 {sections[activeSection]}
             </motion.div>

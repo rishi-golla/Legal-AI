@@ -6,6 +6,7 @@ const Questions = ({ isOpen, onClose, handleSubmit }) => {
     const [gender, setGender] = useState('');
     const [ageGroup, setAgeGroup] = useState('');
     const [background, setBackground] = useState('');
+    const [error, setError] = useState('');
 
     useEffect(() => {
         if (isOpen) {
@@ -24,8 +25,20 @@ const Questions = ({ isOpen, onClose, handleSubmit }) => {
 
     const handleNextStep = () => {
         if (step === 1) {
+            // Validate step 1: check if gender and age group are selected
+            if (!gender || !ageGroup) {
+                setError('Please select both your gender and age group.');
+                return;
+            }
+            setError('');
             setStep(2);
-        } else {
+        } else if (step === 2) {
+            // Validate step 2: check if background is selected
+            if (!background) {
+                setError('Please select your situation.');
+                return;
+            }
+            setError('');
             const userInfoSentence = `I, your user, am a person of gender: ${gender} in age group ${ageGroup} and my situation is best described as: ${background.replace('_', ' ')}.`;
             handleSubmit(userInfoSentence);
         }
@@ -41,12 +54,8 @@ const Questions = ({ isOpen, onClose, handleSubmit }) => {
         <>
             {isOpen && (
                 <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 pt-[40px] pb-[60px] px-2">
-                    {/* <button onClick={() => setIsModalOpen(true)}>Start Questionnaire</button>
-                    <Questions isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} /> */}
-                    {/* const [isModalOpen, setIsModalOpen] = useState(false); */}
-
                     <motion.div
-                        className=" relative bg-white rounded-lg shadow-lg md:p-8 px-2 py-5 w-full max-w-5xl overflow-y-auto max-h-full"
+                        className="relative bg-white rounded-lg shadow-lg md:p-8 px-2 py-5 w-full max-w-5xl overflow-y-auto max-h-full"
                         initial={{ scale: 0 }}
                         animate={{ scale: 1 }}
                         exit={{ scale: 0 }}
@@ -65,6 +74,8 @@ const Questions = ({ isOpen, onClose, handleSubmit }) => {
                                 </div>
                             </div>
                         </div>
+
+                        {error && <p className="text-red-500 mb-4">{error}</p>}
 
                         {step === 1 && (
                             <div>
