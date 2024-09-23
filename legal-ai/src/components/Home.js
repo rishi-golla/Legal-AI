@@ -4,6 +4,7 @@ import About from './About';
 import { useInView } from 'react-intersection-observer';
 import translations from '../translations'; // Import translations
 import Uses from './Uses';
+import Pricing from './Pricing';
 
 const Home = ({ setActiveSection, language }) => {
   const { ref: goalRef, inView: goalInView } = useInView({ threshold: 0.5 });
@@ -27,7 +28,7 @@ const Home = ({ setActiveSection, language }) => {
   // }, [text]);
 
   return (
-    <section className="min-h-screen bg-primary text-textPrimary flex flex-col justify-center items-center text-center space-y-8">
+    <section className="min-h-screen bg-primary text-textPrimary flex flex-col justify-center items-center text-center space-y-8 w-full">
 
       <div className='flex flex-col lg:flex-row h-auto lg:min-h-screen w-full lg:justify-center lg:items-start'>
         <motion.div
@@ -137,9 +138,10 @@ const Home = ({ setActiveSection, language }) => {
       </motion.div>
 
       <About language={language} />
-      <Uses/>
+      <Uses language={language} />
+      <Pricing/>
       <div  className='bg-white w-full text-center text-lg-start text-muted'>
-        <section className='d-flex justify-content-center justify-content-lg-between p-4 border-bottom'>
+        {/* <section className='d-flex justify-content-center justify-content-lg-between p-4 border-bottom'>
           <div className='mb-2 d-none d-lg-block'>
             <span>Get connected with us on social networks:</span>
           </div>
@@ -148,9 +150,9 @@ const Home = ({ setActiveSection, language }) => {
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/2048px-Instagram_logo_2016.svg.png" alt="Instagram" className="w-6 h-6 hover:opacity-75" />
           </a>
             
-        </section>
+        </section> */}
 
-        <section className=' bg-white w-full'>
+        <section className=' bg-white w-full mt-16'>
           <div className='bg-white w-full text-center text-md-start mt-5'>
             <div className='flex flex-row mt-3'>
               <div className=' flex flex-col mx-auto mb-4'>
@@ -211,7 +213,7 @@ const Home = ({ setActiveSection, language }) => {
               </div> */}
 
               <div className='flex flex-col mx-auto mb-md-0 mb-4'>
-                <h6 className='text-uppercase fw-bold mb-4'>Contact</h6>
+                <h6 className='text-uppercase font-bold mb-2'>Contact</h6>
                 <p>
                   {/* <MDBIcon icon="home" className="me-2" /> */}
                   800 W Campbell Rd, Richardson, TX
@@ -224,6 +226,9 @@ const Home = ({ setActiveSection, language }) => {
                   {/* <MDBIcon icon="print" className="me-3" />  */}
                   + 1 469 947 4379
                 </p>
+                <a className='text-center me-4 flex items-center justify-center w-full  ' href="https://www.instagram.com/legal.ai_" target="_blank" rel="noopener noreferrer">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/2048px-Instagram_logo_2016.svg.png" alt="Instagram" className="w-6 h-6 hover:opacity-75" />
+                </a>
               </div>
             </div>
           </div>

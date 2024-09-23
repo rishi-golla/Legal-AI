@@ -154,9 +154,10 @@ const Chatbot = ({ userInfo }) => {
   };
 
   return (
-    <section className="mb-14 flex justify-center items-center w-screen">
-      <div className="bg-transparent shadow-lg rounded-lg px-8 w-full flex justify-center items-center flex-col">
-        <div className="flex items-center justify-center flex-col">
+    <section className="mb-14 flex justify-center items-center w-[90vw]">
+      <div className="bg-transparent shadow-lg rounded-lg w-full flex justify-center items-center flex-col">
+        <div className="flex w-full items-center justify-center flex-col">
+
           <img src="/logo.png" alt="logo" className="h-8 w-8" />
           <p className="text-white">Mike</p>
           <p className="text-white opacity-70 text-[12px]">By Shower Champions</p>

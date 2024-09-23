@@ -1,43 +1,61 @@
 import React, { useState, useEffect, useRef } from "react";
 import { motion, useAnimation } from "framer-motion";
 import './index.css';
-const sections = {
-    "Students": (
-        <div>
-            <h2 className="text-white text-3xl font-bold mb-4">LegalAI for students</h2>
-            <p className="text-purple-300 ">
-                Description of how it will be useful
-            </p>
-        </div>
-    ),
-    "Workers": (
-        <div>
-            <h2 className="text-white text-3xl font-bold mb-4">LegalAI for workers</h2>
-            <p className="text-purple-300 ">
-                Description of how it will be useful
-            </p>
-        </div>
-    ),
-    "Couples": (
-        <div>
-            <h2 className="text-white text-3xl font-bold mb-4">LegalAI for couples</h2>
-            <p className="text-purple-300 ">
-                Description of how it will be useful
-            </p>
-        </div>
-    ),
-    "Businesses": (
-        <div>
-            <h2 className="text-white text-3xl font-bold mb-4">LegalAI for businesses</h2>
-            <p className="text-purple-300 ">
-                Description of how it will be useful
-            </p>
-        </div>
-    ),
-};
+import translations from '../translations'; // Import translations
 
-const App = () => {
-    const [activeSection, setActiveSection] = useState("Students");
+
+const App = ({language}) => {
+    const sections = {
+        "Individuals": (
+            <div className="">
+                <h2 className="text-white text-3xl font-bold mb-4">{translations[language].individualsHeader}</h2>
+                <p className="text-purple-300 ">
+                    {translations[language].individuals}
+                </p>
+            </div>
+        ),
+        "Students": (
+            <div>
+                <h2 className="text-white text-3xl font-bold mb-4">LegalAI for students</h2>
+                <p className="text-purple-300 ">
+                    Students often encounter legal questions related to academic integrity, housing rights, and student loans. LegalAI can help students understand their rights in educational settings and provide insights into financial agreements. This ensures they are well-informed, enabling them to focus on their studies while being aware of their legal protections.
+                </p>
+            </div>
+        ),
+        "Workers": (
+            <div>
+                <h2 className="text-white text-3xl font-bold mb-4">LegalAI for workers</h2>
+                <p className="text-purple-300 ">
+                    Workers can benefit significantly from LegalAI when it comes to understanding their employment rights, such as wage disputes, workplace harassment, and benefits. This chatbot can help employees identify their rights and provide information on how to address workplace issues. With LegalAI, workers are empowered to stand up for themselves and seek justice in the workplace.
+                </p>
+            </div>
+        ),
+        "Immigrants": (
+            <div>
+                <h2 className="text-white text-3xl font-bold mb-4">LegalAI for immigrants</h2>
+                <p className="text-purple-300 ">
+                    For those navigating the complexities of immigration law, LegalAI can offer vital information on visas, green cards, and citizenship processes. It helps users understand the requirements and documents needed for their immigration journey, providing peace of mind during what can be a stressful and uncertain time.
+                </p>
+            </div>
+        ),
+        "Couples": (
+            <div>
+                <h2 className="text-white text-3xl font-bold mb-4">LegalAI for couples</h2>
+                <p className="text-purple-300 ">
+                    For couples, understanding legal implications in areas like marriage, divorce, and property rights is essential. LegalAI can provide guidance on prenuptial agreements, custody arrangements, and division of assets. This resource helps couples navigate their legal responsibilities and rights, fostering better communication and planning for their future together.
+                </p>
+            </div>
+        ),
+        "Businesses": (
+            <div>
+                <h2 className="text-white text-3xl font-bold mb-4">LegalAI for businesses</h2>
+                <p className="text-purple-300 ">
+                    For small business owners, LegalAI is an invaluable resource for understanding compliance, contracts, and employment law. It can answer common questions about business formation, licensing, and intellectual property, allowing entrepreneurs to focus on growing their businesses with confidence, knowing they have access to legal support when needed.
+                </p>
+            </div>
+        ),
+    };
+    const [activeSection, setActiveSection] = useState("Individuals");
     const controls = useAnimation();
     const ref = useRef(null);
 
@@ -65,12 +83,12 @@ const App = () => {
 
     const variants = {
         hidden: { opacity: 0 },
-        visible: { opacity: 1, transition: { duration: 0.5 } },
+        visible: { opacity: 1, transition: { duration: 0.8 } },
     };
 
     const sectionVariants = {
         hidden: { x: -200, opacity: 0 },
-        visible: { x: 0, opacity: 1, transition: { duration: 0.5 } },
+        visible: { x: 0, opacity: 1, transition: { duration: 0.8 } },
     };
 
     return (
