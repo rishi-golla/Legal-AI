@@ -38,7 +38,7 @@ const Header = ({ setActiveSection, language, setLanguage }) => {
           {translations[language].legalAI}
         </h1>
       </div>
-      <nav className="md:flex hidden space-x-6 mx-auto">
+      <nav className="middle lg:flex hidden absolute left-1/2 transform -translate-x-1/2 space-x-6">
         <button
           className="text-purple-300 hover:opacity-80 duration-300 "
           onClick={() => setActiveSection("home")}
