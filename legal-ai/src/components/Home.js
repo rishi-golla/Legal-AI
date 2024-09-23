@@ -27,7 +27,7 @@ const Home = ({ setActiveSection, language }) => {
   // }, [text]);
 
   return (
-    <section className="mb-10 min-h-screen bg-primary text-textPrimary flex flex-col justify-center items-center text-center space-y-8">
+    <section className="min-h-screen bg-primary text-textPrimary flex flex-col justify-center items-center text-center space-y-8">
 
       <div className='flex flex-col lg:flex-row h-auto lg:min-h-screen w-full lg:justify-center lg:items-start'>
         <motion.div
@@ -53,7 +53,7 @@ const Home = ({ setActiveSection, language }) => {
           >
             {displayedText}
           </motion.div> */}
-          <div className='hover:scale-105 duration-150 bg-[#00000080] hover:bg-purple-300 hover:text-black absolute top-0 right-0 rounded-full md:p-4 py-2 px-3 md:text-[16px] text-[14px] text-purple-300'>
+          <div className='hover:scale-105 duration-150 text-white bg-[#00000080] hover:bg-purple-300 hover:text-black absolute top-0 right-0 rounded-full md:p-4 py-2 px-3 md:text-[16px] text-[14px] '>
             {translations[language].clickForChat}
           </div> 
 
@@ -74,7 +74,7 @@ const Home = ({ setActiveSection, language }) => {
               <h2 className="text-purple-300 text-4xl md:text-5xl font-bold text-accent mb-4 leading-tight">
                 {translations[language].innovatingLegal} 
               </h2>
-              <p className="text-purple-300 text-lg">
+              <p className="text-white text-lg">
                 {translations[language].legalGoal}
               </p>
             </div>
@@ -87,7 +87,7 @@ const Home = ({ setActiveSection, language }) => {
             className='w-full flex flex-col gap-5 justify-center'
           >
             <div className="w-full p-6 border border-accent rounded-lg transform transition duration-500 hover:scale-105 shadow-lg" style={{ backgroundColor: 'rgba(0, 0, 0, 0.5)' }}>
-              <p className="text-purple-300 text-lg">
+              <p className="text-white text-lg">
                 {translations[language].goal}
               </p>
             </div>
@@ -100,7 +100,7 @@ const Home = ({ setActiveSection, language }) => {
             className='w-full flex flex-col gap-5 justify-center'
           >
             <div className="w-full p-6 border border-accent rounded-lg transform transition duration-500 hover:scale-105 shadow-lg" style={{ backgroundColor: 'rgba(0, 0, 0, 0.5)' }}>
-              <p className="text-purple-300 text-lg">
+              <p className="text-white text-lg">
                 {translations[language].join}
               </p>
             </div>
@@ -117,7 +117,7 @@ const Home = ({ setActiveSection, language }) => {
         style={{ backgroundColor: 'rgba(0, 0, 0, 0.5)' }}
       >
         <h2 className="text-purple-300 text-4xl font-bold mb-4">{translations[language].goalHead}</h2>
-        <p className="text-purple-300 text-lg">
+        <p className="text-white text-lg">
           {translations[language].goalDescription}
         </p>
       </motion.div>
@@ -131,13 +131,108 @@ const Home = ({ setActiveSection, language }) => {
         style={{ backgroundColor: 'rgba(0, 0, 0, 0.5)' }}
       >
         <h2 className="text-purple-300 text-4xl font-bold mb-4">{translations[language].detailsHead}</h2>
-        <p className="text-purple-300 text-lg">
+        <p className="text-white text-lg">
           {translations[language].detailsDescription}
         </p>
       </motion.div>
 
       <About language={language} />
       <Uses/>
+      <div  className='bg-white w-full text-center text-lg-start text-muted'>
+        <section className='d-flex justify-content-center justify-content-lg-between p-4 border-bottom'>
+          <div className='mb-2 d-none d-lg-block'>
+            <span>Get connected with us on social networks:</span>
+          </div>
+
+          <a className='text-center me-4 flex items-center justify-center w-full  ' href="https://www.instagram.com/legal.ai_" target="_blank" rel="noopener noreferrer">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/2048px-Instagram_logo_2016.svg.png" alt="Instagram" className="w-6 h-6 hover:opacity-75" />
+          </a>
+            
+        </section>
+
+        <section className=' bg-white w-full'>
+          <div className='bg-white w-full text-center text-md-start mt-5'>
+            <div className='flex flex-row mt-3'>
+              <div className=' flex flex-col mx-auto mb-4'>
+                <p className='text-uppercase text-[50px] font-bold mb-4'>
+                  LegalAI
+                </p>
+                <p>
+                  Innovating Legal Assistance with AI
+                </p>
+              </div>
+
+              {/* <div className='flex flex-col mx-auto mb-4'>
+                <h6 className='text-uppercase fw-bold mb-4'>Products</h6>
+                <p>
+                  <a href='#!' className='text-reset'>
+                    Angular
+                  </a>
+                </p>
+                <p>
+                  <a href='#!' className='text-reset'>
+                    React
+                  </a>
+                </p>
+                <p>
+                  <a href='#!' className='text-reset'>
+                    Vue
+                  </a>
+                </p>
+                <p>
+                  <a href='#!' className='text-reset'>
+                    Laravel
+                  </a>
+                </p>
+              </div>
+
+              <div className='flex flex-col mx-auto mb-4'>
+                <h6 className='text-uppercase fw-bold mb-4'>Useful links</h6>
+                <p>
+                  <a href='#!' className='text-reset'>
+                    Pricing
+                  </a>
+                </p>
+                <p>
+                  <a href='#!' className='text-reset'>
+                    Settings
+                  </a>
+                </p>
+                <p>
+                  <a href='#!' className='text-reset'>
+                    Orders
+                  </a>
+                </p>
+                <p>
+                  <a href='#!' className='text-reset'>
+                    Help
+                  </a>
+                </p>
+              </div> */}
+
+              <div className='flex flex-col mx-auto mb-md-0 mb-4'>
+                <h6 className='text-uppercase fw-bold mb-4'>Contact</h6>
+                <p>
+                  {/* <MDBIcon icon="home" className="me-2" /> */}
+                  800 W Campbell Rd, Richardson, TX
+                </p>
+                <p>
+                  {/* <MDBIcon icon="envelope" className="me-3" /> */}
+                  awslegalai@gmail.com
+                </p>
+                <p>
+                  {/* <MDBIcon icon="print" className="me-3" />  */}
+                  + 1 469 947 4379
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <div className='text-center p-4' style={{ backgroundColor: 'rgba(0, 0, 0, 0.05)' }}>
+          
+        </div>
+      </div>
     </section>
   );
 };

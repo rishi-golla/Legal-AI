@@ -27,7 +27,7 @@ function App() {
     <div className="relative bg-primary overflow-y-auto">
       <SpaceBackground />
       <ChatbotButton setActiveSection={setActiveSection} />
-      <div className='px-3 py-6 min-h-screen w-full'>
+      <div className=' pt-6 min-h-screen w-full'>
         <Header setActiveSection={setActiveSection} language={language} setLanguage={setLanguage} />
         <div className="pt-[100px]">
           {activeSection === "home" && <Home setActiveSection={setActiveSection} language={language} />}

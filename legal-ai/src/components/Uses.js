@@ -83,7 +83,7 @@ const App = () => {
         >
             {/* Header Section */}
             <h1 className="text-4xl font-bold mb-4 text-white">How LegalAI can help you?</h1>
-            <p className="text-lg text-white opacity-60 mb-8">
+            <p className="text-lg text-purple-300 mb-8">
                 Chatbot App is a powerful tool that can be used in a variety of ways to assist users in different contexts having legal questions.
             </p>
 
