@@ -11,6 +11,7 @@ import Template from './components/Template';
 import translations from './translations'; // Import the translations
 import ExperienceComponent from './components/Experience';
 import ChatbotButton from './components/ChatbotButton';
+import DocumentSum from './components/DocumentSum';
 
 function App() {
   const [activeSection, setActiveSection] = useState("home");
@@ -36,6 +37,7 @@ function App() {
           {activeSection === "contact" && <Contact setActiveSection={setActiveSection} />}
           {activeSection === "questions" && <Questions isOpen={true} onClose={() => setActiveSection("home")} handleSubmit={handleFormSubmit} />}
           {activeSection === "Template" && <Template />}
+          {activeSection === "documentSum" && <DocumentSum />}
           {activeSection === "experience" && <ExperienceComponent language={language} />}
         </div>
         

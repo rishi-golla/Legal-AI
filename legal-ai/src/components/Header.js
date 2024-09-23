@@ -59,6 +59,7 @@ const Header = ({ setActiveSection, language, setLanguage }) => {
         >
           {translations[language].experience}
         </button> */}
+
         
         <button
           className="text-purple-300 hover:opacity-80 duration-300 "
@@ -66,6 +67,11 @@ const Header = ({ setActiveSection, language, setLanguage }) => {
         >
           Document Templates
         </button>
+        <button 
+        className="text-purple-300 hover:opacity-80 duration-300 "
+        onClick={() => setActiveSection("documentSum")}>Document Sum
+        </button>
+
       </nav>
       <div className="flex items-center space-x-2">
         <button
