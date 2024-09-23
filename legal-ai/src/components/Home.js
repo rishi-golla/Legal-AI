@@ -5,6 +5,7 @@ import { useInView } from 'react-intersection-observer';
 import translations from '../translations'; // Import translations
 import Uses from './Uses';
 import Pricing from './Pricing';
+import { FaLink } from 'react-icons/fa';
 
 const Home = ({ setActiveSection, language }) => {
   const { ref: goalRef, inView: goalInView } = useInView({ threshold: 0.5 });
@@ -58,9 +59,9 @@ const Home = ({ setActiveSection, language }) => {
             {translations[language].clickForChat}
           </div> 
 
-          <div className='duration-150 bg-[#00000080] hover:text-black absolute top-[60px] right-[145px] rounded-full p-4 text-purple-300'>
+          <div className='sm:flex hidden duration-150 bg-[#00000080] hover:text-black absolute top-[60px] right-[145px] rounded-full p-4 text-purple-300'>
           </div>
-          <div className='duration-150 bg-[#00000080] hover:text-black absolute top-[90px] right-[180px] rounded-full p-2 text-purple-300'>
+          <div className='sm:flex hidden duration-150 bg-[#00000080] hover:text-black absolute top-[90px] right-[180px] rounded-full p-2 text-purple-300'>
           </div>
         </motion.div>
 
@@ -87,10 +88,13 @@ const Home = ({ setActiveSection, language }) => {
             transition={{ duration: 0.8, delay: 1.2 }}
             className='w-full flex flex-col gap-5 justify-center'
           >
-            <div className="w-full p-6 border border-accent rounded-lg transform transition duration-500 hover:scale-105 shadow-lg" style={{ backgroundColor: 'rgba(0, 0, 0, 0.5)' }}>
-              <p className="text-white text-lg">
+            <div onClick={() => setActiveSection("Template")} className="w-full flex justify-center items-center p-6 border border-accent rounded-lg transform transition duration-500 hover:scale-105 shadow-lg" style={{ backgroundColor: 'rgba(0, 0, 0, 0.5)' }}>
+              {/* <p className="text-white text-lg">
                 {translations[language].goal}
-              </p>
+              </p> */}
+              <button className='hover:text-purple-300  duration-300 flex flex-row  gap-2 justify-between items-center text-white md:text-[50px] text-[20px] font-black' >
+                Documentation Templates <FaLink/>
+              </button>
             </div>
           </motion.div>
 
@@ -100,10 +104,14 @@ const Home = ({ setActiveSection, language }) => {
             transition={{ duration: 0.8, delay: 1.2 }}
             className='w-full flex flex-col gap-5 justify-center'
           >
-            <div className="w-full p-6 border border-accent rounded-lg transform transition duration-500 hover:scale-105 shadow-lg" style={{ backgroundColor: 'rgba(0, 0, 0, 0.5)' }}>
-              <p className="text-white text-lg">
+            <div onClick={() => setActiveSection("documentSum")} className="w-full flex justify-center items-center p-6 border border-accent rounded-lg transform transition duration-500 hover:scale-105 shadow-lg" style={{ backgroundColor: 'rgba(0, 0, 0, 0.5)' }}>
+              {/* <p className="text-white text-lg">
                 {translations[language].join}
-              </p>
+              </p> */}
+
+              <button className='hover:text-purple-300  duration-300 flex flex-row  gap-2 justify-between items-center text-white  md:text-[50px] text-[20px] font-black'>
+                Documentation Summarizer <FaLink />
+              </button>
             </div>
           </motion.div>
         </div>
@@ -156,10 +164,10 @@ const Home = ({ setActiveSection, language }) => {
           <div className='bg-white w-full text-center text-md-start mt-5'>
             <div className='flex flex-row mt-3'>
               <div className=' flex flex-col mx-auto mb-4'>
-                <p className='text-uppercase text-[50px] font-bold mb-4'>
+                <p className='text-uppercase md:text-[50px] text-[30px] font-bold md:mb-4 mb-2'>
                   LegalAI
                 </p>
-                <p>
+                <p className='text-[14px]'>
                   Innovating Legal Assistance with AI
                 </p>
               </div>
@@ -213,16 +221,16 @@ const Home = ({ setActiveSection, language }) => {
               </div> */}
 
               <div className='flex flex-col mx-auto mb-md-0 mb-4'>
-                <h6 className='text-uppercase font-bold mb-2'>Contact</h6>
-                <p>
+                <h6 className='text-uppercase text-[17px] font-bold mb-2'>Contact</h6>
+                <p className='text-[14px]'>
                   {/* <MDBIcon icon="home" className="me-2" /> */}
                   800 W Campbell Rd, Richardson, TX
                 </p>
-                <p>
+                <p className='text-[14px]'>
                   {/* <MDBIcon icon="envelope" className="me-3" /> */}
                   awslegalai@gmail.com
                 </p>
-                <p>
+                <p className='text-[14px]'>
                   {/* <MDBIcon icon="print" className="me-3" />  */}
                   + 1 469 947 4379
                 </p>

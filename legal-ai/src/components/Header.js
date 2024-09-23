@@ -34,19 +34,19 @@ const Header = ({ setActiveSection, language, setLanguage }) => {
           alt="logo"
           className="h-8 w-8"
         />
-        <h1 className="md:flex hidden text-2xl font-bold text-white cursor-pointer">
+        <h1 className="lg:flex hidden text-2xl font-bold text-white cursor-pointer">
           {translations[language].legalAI}
         </h1>
       </div>
-      <nav className="middle lg:flex hidden absolute left-1/2 transform -translate-x-1/2 space-x-6">
+      <nav className="middle md:flex hidden absolute lg:left-1/2 left-[30%] transform -translate-x-1/2 space-x-6">
         <button
-          className="text-purple-300 hover:opacity-80 duration-300 "
+          className="xl:flex hidden  text-purple-300 hover:opacity-80 duration-300 "
           onClick={() => setActiveSection("home")}
         >
           {translations[language].home}
         </button>
         <button
-          className="text-purple-300 hover:opacity-80 duration-300 "
+          className="xl:flex hidden  text-purple-300 hover:opacity-80 duration-300 "
           onClick={() => setActiveSection("about")}
         >
 
@@ -75,19 +75,19 @@ const Header = ({ setActiveSection, language, setLanguage }) => {
       </nav>
       <div className="flex items-center space-x-2">
         <button
-          className='hover:opacity-80 duration-300  bg-gradient-to-r from-purple-800 to-purple-500 text-purple-300 rounded-lg py-2 px-4'
+          className='hover:opacity-80 duration-300  md:text-[16px] text-[13px]   bg-gradient-to-r from-purple-800 to-purple-500 text-purple-300 rounded-lg  md:py-2 md:px-4 px-1 py-[6px]'
           onClick={() => setActiveSection("chatbot")}
         >
           {translations[language].chatNow}
         </button>
         <button
-          className='hover:opacity-80 duration-300 bg-gradient-to-r from-purple-800 to-purple-300 bg-clip-text text-transparent text-purple-300 border-2 border-purple-300 rounded-lg py-2 px-4'
+          className='hover:opacity-80 md:text-[16px] text-[13px] duration-300 bg-gradient-to-r from-purple-800 to-purple-300 bg-clip-text text-transparent text-purple-300 border-2 border-purple-300 rounded-lg md:py-2 md:px-4 px-1 py-1'
           onClick={() => setActiveSection("contact")}
         >
           {translations[language].contactUs}
         </button>
         <button
-          className=" hover:opacity-80 duration-300 translation ml-4 text-purple-300 border-transparent border-b-2 hover:border-purple-300"
+          className=" hover:opacity-80 duration-300 translation ml-4 text-purple-300 border-transparent border-b-2 hover:border-purple-300  md:text-[16px] text-[13px]  "
           onClick={toggleLanguage}
         >
           {language === 'en' ? 'Español' : 'English'}
