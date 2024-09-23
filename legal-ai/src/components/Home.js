@@ -4,6 +4,7 @@ import About from './About';
 import { useInView } from 'react-intersection-observer';
 import translations from '../translations'; // Import translations
 import Uses from './Uses';
+import Pricing from './Pricing';
 
 const Home = ({ setActiveSection, language }) => {
   const { ref: goalRef, inView: goalInView } = useInView({ threshold: 0.5 });
@@ -138,6 +139,7 @@ const Home = ({ setActiveSection, language }) => {
 
       <About language={language} />
       <Uses language={language} />
+      <Pricing/>
       <div  className='bg-white w-full text-center text-lg-start text-muted'>
         {/* <section className='d-flex justify-content-center justify-content-lg-between p-4 border-bottom'>
           <div className='mb-2 d-none d-lg-block'>

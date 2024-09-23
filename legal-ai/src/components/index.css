@@ -9,7 +9,8 @@
 
     .container {
         @apply rounded-lg;
-        box-shadow: 13px 13px 20px #D8B4FE, -13px -13px 20px #D8B4FE;
+        box-shadow: 13px 13px 20px #D8B4FE;
+        /* box-shadow: 13px 13px 20px #D8B4FE, -13px -13px 20px #D8B4FE; */
         /* box-shadow: 13px 13px 20px #e8afcc, -13px -13px 20px #e8afcc; */
 
     }
