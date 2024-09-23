@@ -150,6 +150,11 @@ const Questions = ({ isOpen, onClose, handleSubmit }) => {
                                         Married with Issues
                                     </button>
                                     <button
+                                        className={`py-3 px-6 rounded-lg text-md ${background === 'married_with_issues' ? 'bg-purple-300' : 'bg-gray-200'} hover:bg-purple-400 transition-all`}
+                                        onClick={() => setBackground('immigrant')}>
+                                        Immigrant
+                                    </button>
+                                    <button
                                         className={`py-3 px-6 rounded-lg text-md ${background === 'employed_with_issues' ? 'bg-purple-300' : 'bg-gray-200'} hover:bg-purple-400 transition-all`}
                                         onClick={() => setBackground('employed_with_issues')}>
                                         Employed with Issues
@@ -157,7 +162,7 @@ const Questions = ({ isOpen, onClose, handleSubmit }) => {
                                     <button
                                         className={`py-3 px-6 rounded-lg text-md ${background === 'seeking_advice' ? 'bg-purple-300' : 'bg-gray-200'} hover:bg-purple-400 transition-all`}
                                         onClick={() => setBackground('seeking_advice')}>
-                                        Seeking Legal Advice
+                                        Seeking legal advice for business
                                     </button>
                                     <button
                                         className={`py-3 px-6 rounded-lg text-md ${background === 'others' ? 'bg-purple-300' : 'bg-gray-200'} hover:bg-purple-400 transition-all`}

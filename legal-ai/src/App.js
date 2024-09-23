@@ -26,10 +26,10 @@ function App() {
   return (
     <div className="relative bg-primary overflow-y-auto w-full">
       <SpaceBackground />
-      <ChatbotButton setActiveSection={setActiveSection} />
+      <ChatbotButton setActiveSection={setActiveSection} activeSection={activeSection}/>
       <div className=' pt-6 min-h-screen w-full'>
         <Header setActiveSection={setActiveSection} language={language} setLanguage={setLanguage} />
-        <div className="pt-[100px] w-full">
+        <div className="pt-[100px] w-full flex flex-row justify-center">
           {activeSection === "home" && <Home setActiveSection={setActiveSection} language={language} />}
           {activeSection === "about" && <About language={language} />}
           {activeSection === "chatbot" && <Chatbot userInfo={userInfo} />}
@@ -38,9 +38,10 @@ function App() {
           {activeSection === "Template" && <Template />}
           {activeSection === "experience" && <ExperienceComponent language={language} />}
         </div>
+        <Footer />
         
       </div>
-      <Footer />
+      
     </div>
   );
 }
