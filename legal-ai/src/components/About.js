@@ -25,17 +25,17 @@ const About = ({language}) => {
         animate={{ opacity: hackathonInView ? 1 : 0 }}
         transition={{ duration: 1 }} className="mb-10 w-full max-w-4xl p-6 border border-accent rounded-lg transform transition duration-500 hover:scale-105 shadow-lg" style={{ backgroundColor: 'rgba(0, 0, 0, 0.5)' }}>
         <h2 className="text-purple-300 text-4xl font-bold text-accent mb-4">{translations[language].aboutHead}</h2>
-        <p className="text-purple-300 mb-4">
+        <p className="text-white mb-4">
           {translations[language].aboutDescription}
         </p>
       </motion.div>
       <h3 className="text-purple-300 text-3xl font-semibold text-accent mb-8"> {translations[language].team}</h3>
       <div className="flex items-center justify-center flex-wrap gap-4 w-[95%]">
         {teamMembers.map((member, index) => (
-          <div key={index} className="w-[250px] h-[360px] flex items-center justify-center flex-col p-4 bg-black border rounded-lg shadow-lg transform hover:scale-105 transition duration-300">
+          <div key={index} className="w-[250px] h-[390px] flex items-center justify-center flex-col p-4 bg-black border rounded-lg shadow-lg transform hover:scale-105 transition duration-300">
             <Photo imgSrc={member.image} />
             <h4 className="text-purple-300 text-xl font-bold text-accent">{member.name}</h4>
-            <p className="text-purple-300 text-wrap">{member.role}</p>
+            <p className="text-white text-wrap">{member.role}</p>
             <a href={member.linkedin} target="_blank" rel="noopener noreferrer">
             <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn" className="mt-2 w-6 h-6 hover:opacity-75" />
             </a>

@@ -2,8 +2,10 @@ import React from 'react';
 import TypingText from './TypingText'; // Adjust the path as needed
 
 const Messages = ({ messages }) => {
+  
+  
   return (
-    <div className="bg-transparent p-4 rounded-md overflow-y-auto flex flex-col space-y-2 h-[400px] w-full">
+    <div className="bg-transparent p-4 rounded-md overflow-y-auto flex flex-col space-y-2 h-auto overflow-visible w-full">
       {messages.length === 0 ? (
         <p className="text-gray-500 italic text-center">Hi! I'm Mike, your AI law assistant, how can I help you today?</p>
       ) : (
