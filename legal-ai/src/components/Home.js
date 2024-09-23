@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import About from './About';
 import { useInView } from 'react-intersection-observer';
 import translations from '../translations'; // Import translations
+import Uses from './Uses';
 
 const Home = ({ setActiveSection, language }) => {
   const { ref: goalRef, inView: goalInView } = useInView({ threshold: 0.5 });
@@ -26,7 +27,7 @@ const Home = ({ setActiveSection, language }) => {
   // }, [text]);
 
   return (
-    <section className=" min-h-screen bg-primary text-textPrimary flex flex-col justify-center items-center text-center space-y-8">
+    <section className="mb-10 min-h-screen bg-primary text-textPrimary flex flex-col justify-center items-center text-center space-y-8">
 
       <div className='flex flex-col lg:flex-row h-auto lg:min-h-screen w-full lg:justify-center lg:items-start'>
         <motion.div
@@ -136,6 +137,7 @@ const Home = ({ setActiveSection, language }) => {
       </motion.div>
 
       <About language={language} />
+      <Uses/>
     </section>
   );
 };
