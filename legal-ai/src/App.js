@@ -24,12 +24,12 @@ function App() {
   };
 
   return (
-    <div className="relative bg-primary overflow-y-auto">
+    <div className="relative bg-primary overflow-y-auto w-full">
       <SpaceBackground />
       <ChatbotButton setActiveSection={setActiveSection} />
       <div className=' pt-6 min-h-screen w-full'>
         <Header setActiveSection={setActiveSection} language={language} setLanguage={setLanguage} />
-        <div className="pt-[100px]">
+        <div className="pt-[100px] w-full">
           {activeSection === "home" && <Home setActiveSection={setActiveSection} language={language} />}
           {activeSection === "about" && <About language={language} />}
           {activeSection === "chatbot" && <Chatbot userInfo={userInfo} />}
