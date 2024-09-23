@@ -53,7 +53,7 @@ const Home = ({ setActiveSection, language }) => {
           >
             {displayedText}
           </motion.div> */}
-          <div className='hover:scale-105 duration-150 text-white bg-[#00000080] hover:bg-purple-300 hover:text-black absolute top-0 right-0 rounded-full md:p-4 py-2 px-3 md:text-[16px] text-[14px] '>
+          <div className='hover:scale-105 duration-150 text-white bg-[#00000080] hover:bg-purple-300 hover:text-black absolute top-0 right-0 rounded-full md:p-4 py-2 px-3 md:text-[16px] text-[14px] cursor-pointer' onClick={() => setActiveSection("questions")}>
             {translations[language].clickForChat}
           </div> 
 
