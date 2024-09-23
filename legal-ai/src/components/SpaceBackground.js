@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import './index.css';
 
 const SpaceBackground = () => {
   useEffect(() => {

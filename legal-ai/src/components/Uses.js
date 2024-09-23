@@ -67,7 +67,7 @@ const App = ({language}) => {
                     controls.start("visible");
                 }
             },
-            { threshold: 0.1 } // Trigger when at least 10% is visible
+            { threshold: 0.05 } // Trigger when at least 10% is visible
         );
 
         if (ref.current) {
@@ -97,7 +97,7 @@ const App = ({language}) => {
             initial="hidden"
             animate={controls}
             variants={variants}
-            className="max-w-7xl mx-auto px-4 py-8"
+            className="max-w-7xl mx-auto px-4 py-8 md:flex hidden flex-col"
         >
             {/* Header Section */}
             <h1 className="text-4xl font-bold mb-4 text-white">How LegalAI can help you?</h1>
