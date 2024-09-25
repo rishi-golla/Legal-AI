@@ -93,7 +93,7 @@ const Home = ({ setActiveSection, language }) => {
                 {translations[language].goal}
               </p> */}
               <button className='hover:text-purple-300  duration-300 flex flex-row  gap-2 justify-between items-center text-white md:text-[50px] text-[20px] font-black' >
-                Documentation Templates <FaLink/>
+                LegalMystery <FaLink/>
               </button>
             </div>
           </motion.div>
